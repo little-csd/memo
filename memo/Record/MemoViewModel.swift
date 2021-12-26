@@ -80,7 +80,6 @@ class MemoViewModel: ObservableObject {
     func removeMemo(_ index: Int, at chain: MemoChain) {
         if (chain.memos.count == 1) {
             model.memoChains.removeAll { $0.id == chain.id }
-            chain.id.uuidString.removeFileAsUUID(with: CHAINS_PATH_PREFIX)
             model.saveChainIDs()
         } else {
             let idx = model.memoChains.firstIndex { $0.id == chain.id } ?? 0

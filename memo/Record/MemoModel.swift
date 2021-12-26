@@ -144,6 +144,38 @@ struct MemoModel {
         memoChains = []
     }
     
+    func cleanupDisk() {
+        var attachmentSet = Set<String>()
+        var chainSet = Set<String>()
+        memoChains.forEach { chain in
+            chainSet.update(with: chain.id.uuidString)
+            chain.memos.forEach { memo in
+                memo.attachments.forEach { attachment in
+                    attachmentSet.update(with: attachment)
+                }
+            }
+        }
+        
+        let imagePath = URL_DOC.appendingPathComponent(IMAGES_PATH_PREFIX, isDirectory: true)
+        try? FileManager.default.contentsOfDirectory(at: imagePath, includingPropertiesForKeys: nil, options: .producesRelativePathURLs).forEach { url in
+            let attachment = url.lastPathComponent
+            if !attachmentSet.contains(attachment) {
+                if let _ = try? FileManager.default.removeItem(at: url) {
+                    print("Remove image: \(attachment) done")
+                }
+            }
+        }
+        let chainsPath = URL_DOC.appendingPathComponent(CHAINS_PATH_PREFIX, isDirectory: true)
+        try? FileManager.default.contentsOfDirectory(at: chainsPath, includingPropertiesForKeys: nil, options: .producesRelativePathURLs).forEach{ url in
+            let chainId = url.lastPathComponent
+            if !chainSet.contains(chainId) {
+                if let _ = try? FileManager.default.removeItem(at: url) {
+                    print("Remove chain: \(chainId) done")
+                }
+            }
+        }
+    }
+    
     init() {
         let URL_CHAINS = URL_DOC.appendingPathComponent(CHAINS_PATH_PREFIX, isDirectory: true)
         let URL_IMAGES = URL_DOC.appendingPathComponent(IMAGES_PATH_PREFIX, isDirectory: true)
@@ -154,6 +186,7 @@ struct MemoModel {
             try! FileManager.default.createDirectory(at: URL_IMAGES, withIntermediateDirectories: true)
         }
         memoChains = MemoModel.createMemosFromDB()
+        cleanupDisk()
     }
 }
 
