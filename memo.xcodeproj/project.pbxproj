@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE28FE0D275B417F00CD4BBC /* RichTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE0C275B417F00CD4BBC /* RichTextEditorView.swift */; };
+		EE28FE0F275B43F400CD4BBC /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE0E275B43F400CD4BBC /* RichTextView.swift */; };
+		EE28FE14275B647800CD4BBC /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = EE28FE13275B647800CD4BBC /* SwiftUIX */; };
+		EE28FE16275B698100CD4BBC /* LimitedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE15275B698100CD4BBC /* LimitedTextView.swift */; };
+		EE28FE18275BD35400CD4BBC /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE17275BD35400CD4BBC /* TagViewModel.swift */; };
+		EE28FE1A275D166400CD4BBC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE19275D166400CD4BBC /* ImagePicker.swift */; };
+		EE28FE1C275D1DA600CD4BBC /* ImageWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28FE1B275D1DA600CD4BBC /* ImageWithPreview.swift */; };
 		EE56F24727494AA000C7E489 /* memoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F24627494AA000C7E489 /* memoApp.swift */; };
 		EE56F24927494AA000C7E489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F24827494AA000C7E489 /* ContentView.swift */; };
 		EE56F24B27494AA100C7E489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE56F24A27494AA100C7E489 /* Assets.xcassets */; };
@@ -14,6 +21,19 @@
 		EE56F25827494AA100C7E489 /* memoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F25727494AA100C7E489 /* memoTests.swift */; };
 		EE56F26227494AA100C7E489 /* memoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F26127494AA100C7E489 /* memoUITests.swift */; };
 		EE56F26427494AA100C7E489 /* memoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F26327494AA100C7E489 /* memoUITestsLaunchTests.swift */; };
+		EE56F27D27494E5A00C7E489 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F27C27494E5A00C7E489 /* RecordView.swift */; };
+		EE56F27F27494E8E00C7E489 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F27E27494E8E00C7E489 /* Common.swift */; };
+		EE56F28127494EB800C7E489 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F28027494EB800C7E489 /* BottomSheet.swift */; };
+		EE56F28427494EE000C7E489 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F28327494EE000C7E489 /* VisualEffectView.swift */; };
+		EE56F28727494FA400C7E489 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F28627494FA400C7E489 /* FlexView.swift */; };
+		EE56F28A2749509B00C7E489 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F2892749509B00C7E489 /* MemoViewModel.swift */; };
+		EE56F28C274950B600C7E489 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F28B274950B600C7E489 /* MemoModel.swift */; };
+		EE56F28E2749544D00C7E489 /* MemoChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56F28D2749544D00C7E489 /* MemoChainView.swift */; };
+		EE575EE32778241D00C5402F /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE575EE22778241D00C5402F /* KeyboardGuardian.swift */; };
+		EE5FF414277762B000BFE9F6 /* LabelCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FF413277762B000BFE9F6 /* LabelCreateView.swift */; };
+		EE5FF416277764CA00BFE9F6 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FF415277764CA00BFE9F6 /* LabelView.swift */; };
+		EE5FF41A2777664100BFE9F6 /* ImagesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FF4192777664100BFE9F6 /* ImagesRowView.swift */; };
+		EEE52186276D9B7000109052 /* MemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE52185276D9B7000109052 /* MemoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE28FE0C275B417F00CD4BBC /* RichTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditorView.swift; sourceTree = "<group>"; };
+		EE28FE0E275B43F400CD4BBC /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
+		EE28FE15275B698100CD4BBC /* LimitedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedTextView.swift; sourceTree = "<group>"; };
+		EE28FE17275BD35400CD4BBC /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		EE28FE19275D166400CD4BBC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EE28FE1B275D1DA600CD4BBC /* ImageWithPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithPreview.swift; sourceTree = "<group>"; };
 		EE56F24327494AA000C7E489 /* memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE56F24627494AA000C7E489 /* memoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoApp.swift; sourceTree = "<group>"; };
 		EE56F24827494AA000C7E489 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +70,19 @@
 		EE56F25D27494AA100C7E489 /* memoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE56F26127494AA100C7E489 /* memoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoUITests.swift; sourceTree = "<group>"; };
 		EE56F26327494AA100C7E489 /* memoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE56F27C27494E5A00C7E489 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		EE56F27E27494E8E00C7E489 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		EE56F28027494EB800C7E489 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		EE56F28327494EE000C7E489 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		EE56F28627494FA400C7E489 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
+		EE56F2892749509B00C7E489 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		EE56F28B274950B600C7E489 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		EE56F28D2749544D00C7E489 /* MemoChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoChainView.swift; sourceTree = "<group>"; };
+		EE575EE22778241D00C5402F /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		EE5FF413277762B000BFE9F6 /* LabelCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCreateView.swift; sourceTree = "<group>"; };
+		EE5FF415277764CA00BFE9F6 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		EE5FF4192777664100BFE9F6 /* ImagesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRowView.swift; sourceTree = "<group>"; };
+		EEE52185276D9B7000109052 /* MemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE28FE14275B647800CD4BBC /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +134,10 @@
 		EE56F24527494AA000C7E489 /* memo */ = {
 			isa = PBXGroup;
 			children = (
+				EE56F28527494F8500C7E489 /* BasicView */,
+				EE56F27927494E0800C7E489 /* Record */,
+				EEE52182276D9B1100109052 /* Edit */,
+				EE56F27227494DC900C7E489 /* Util */,
 				EE56F24627494AA000C7E489 /* memoApp.swift */,
 				EE56F24827494AA000C7E489 /* ContentView.swift */,
 				EE56F24A27494AA100C7E489 /* Assets.xcassets */,
@@ -127,6 +171,53 @@
 			path = memoUITests;
 			sourceTree = "<group>";
 		};
+		EE56F27227494DC900C7E489 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EE56F27E27494E8E00C7E489 /* Common.swift */,
+				EE56F28027494EB800C7E489 /* BottomSheet.swift */,
+				EE28FE19275D166400CD4BBC /* ImagePicker.swift */,
+				EE28FE1B275D1DA600CD4BBC /* ImageWithPreview.swift */,
+				EE575EE22778241D00C5402F /* KeyboardGuardian.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EE56F27927494E0800C7E489 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				EE28FE0C275B417F00CD4BBC /* RichTextEditorView.swift */,
+				EE56F27C27494E5A00C7E489 /* RecordView.swift */,
+				EE56F28B274950B600C7E489 /* MemoModel.swift */,
+				EE56F2892749509B00C7E489 /* MemoViewModel.swift */,
+				EE56F28D2749544D00C7E489 /* MemoChainView.swift */,
+				EE28FE17275BD35400CD4BBC /* TagViewModel.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		EE56F28527494F8500C7E489 /* BasicView */ = {
+			isa = PBXGroup;
+			children = (
+				EE56F28627494FA400C7E489 /* FlexView.swift */,
+				EE56F28327494EE000C7E489 /* VisualEffectView.swift */,
+				EE28FE0E275B43F400CD4BBC /* RichTextView.swift */,
+				EE28FE15275B698100CD4BBC /* LimitedTextView.swift */,
+				EE5FF413277762B000BFE9F6 /* LabelCreateView.swift */,
+				EE5FF415277764CA00BFE9F6 /* LabelView.swift */,
+				EE5FF4192777664100BFE9F6 /* ImagesRowView.swift */,
+			);
+			path = BasicView;
+			sourceTree = "<group>";
+		};
+		EEE52182276D9B1100109052 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				EEE52185276D9B7000109052 /* MemoDetailView.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +234,9 @@
 			dependencies = (
 			);
 			name = memo;
+			packageProductDependencies = (
+				EE28FE13275B647800CD4BBC /* SwiftUIX */,
+			);
 			productName = memo;
 			productReference = EE56F24327494AA000C7E489 /* memo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +309,9 @@
 				Base,
 			);
 			mainGroup = EE56F23A27494AA000C7E489;
+			packageReferences = (
+				EE28FE12275B647800CD4BBC /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = EE56F24427494AA000C7E489 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +354,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE28FE0D275B417F00CD4BBC /* RichTextEditorView.swift in Sources */,
+				EE5FF416277764CA00BFE9F6 /* LabelView.swift in Sources */,
+				EE56F28A2749509B00C7E489 /* MemoViewModel.swift in Sources */,
 				EE56F24927494AA000C7E489 /* ContentView.swift in Sources */,
+				EE56F28E2749544D00C7E489 /* MemoChainView.swift in Sources */,
+				EEE52186276D9B7000109052 /* MemoDetailView.swift in Sources */,
+				EE28FE1C275D1DA600CD4BBC /* ImageWithPreview.swift in Sources */,
+				EE56F28727494FA400C7E489 /* FlexView.swift in Sources */,
+				EE28FE18275BD35400CD4BBC /* TagViewModel.swift in Sources */,
+				EE56F27D27494E5A00C7E489 /* RecordView.swift in Sources */,
+				EE56F28427494EE000C7E489 /* VisualEffectView.swift in Sources */,
+				EE28FE0F275B43F400CD4BBC /* RichTextView.swift in Sources */,
+				EE56F27F27494E8E00C7E489 /* Common.swift in Sources */,
+				EE56F28127494EB800C7E489 /* BottomSheet.swift in Sources */,
+				EE5FF414277762B000BFE9F6 /* LabelCreateView.swift in Sources */,
 				EE56F24727494AA000C7E489 /* memoApp.swift in Sources */,
+				EE56F28C274950B600C7E489 /* MemoModel.swift in Sources */,
+				EE28FE1A275D166400CD4BBC /* ImagePicker.swift in Sources */,
+				EE28FE16275B698100CD4BBC /* LimitedTextView.swift in Sources */,
+				EE575EE32778241D00C5402F /* KeyboardGuardian.swift in Sources */,
+				EE5FF41A2777664100BFE9F6 /* ImagesRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE28FE12275B647800CD4BBC /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE28FE13275B647800CD4BBC /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE28FE12275B647800CD4BBC /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE56F23B27494AA000C7E489 /* Project object */;
 }
