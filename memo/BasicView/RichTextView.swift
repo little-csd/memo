@@ -98,6 +98,7 @@ class RichTextViewCoordinator: NSObject, UITextViewDelegate, ObservableObject {
     func updateData(data: NSAttributedString) {
         if let view = view {
             view.attributedText = data
+            isTextEmpty = data.string.isEmpty
             self.data = data
         }
     }
