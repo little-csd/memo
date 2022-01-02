@@ -128,6 +128,16 @@ struct MemoDetailView: View {
                     } label: {
                         Image("EditorBold").renderingMode(.template).foregroundColor(richTextViewCoord.isBold ? .blue96 : .grey58)
                     }
+                    Button {
+                        UINotificationFeedbackGenerator().notificationOccurred(.error)
+                    } label: {
+                        Image("EditorTodo").renderingMode(.template).foregroundColor(.grey58)
+                    }
+                    Button {
+                        UINotificationFeedbackGenerator().notificationOccurred(.error)
+                    } label: {
+                        Image("EditorScan").renderingMode(.template).foregroundColor(.grey58)
+                    }
                     Spacer()
                     Button {
                         if (richTextViewCoord.isTextEmpty) {
@@ -144,10 +154,13 @@ struct MemoDetailView: View {
                             richTextViewCoord.closeKeyboard()
                         }
                     } label: {
-                        Text(keyboardState.keyboardIsHidden ? "保存" : "完成").font(.system(size: 14)).foregroundColor(Color.white)
-                            .padding(.edge(top: 5, leading: 14, bottom: 5, trailing: 14))
+                        Text(keyboardState.keyboardIsHidden ? "保存" : "完成")
+                            .font(.system(size: 14, weight: .bold, design: .default))
+                            .foregroundColor(Color.white)
+                            .frame(height: 28)
+                            .padding(.horizontal, 12)
                             .background(Color.blue96)
-                            .cornerRadius(CORNER_RADIUS_S)
+                            .cornerRadius(CORNER_RADIUS)
                     }
                 }
                 .padding(.edge(top: 8, leading: 24, bottom: 8, trailing: 24))

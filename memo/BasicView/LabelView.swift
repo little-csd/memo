@@ -25,7 +25,8 @@ struct LabelView: View {
                     Text("#\(label)")
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.blue96)
-                        .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
+                        .padding(.horizontal, 8)
+                        .frame(height: 28)
                         .background(Color.grey97)
                         .cornerRadius(CORNER_RADIUS)
                 }
@@ -38,15 +39,15 @@ struct LabelView: View {
                 } label: {
                     Group {
                         if (currentLabels.count > 0) {
-                            Image(systemName: "plus")
-                                .frame(width: 8, height: 8)
+                            Image("EditPlus")
+                                .frame(width: 12, height: 12)
                                 .padding(.all, 8)
                         }
                         if (currentLabels.count == 0) {
                             Text("#点击添加")
                                 .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(.blue96)
-                                .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
+                                .padding(.horizontal, 8)
+                                .frame(height: 28)
                         }
                     }
                     .background(Color.grey97)

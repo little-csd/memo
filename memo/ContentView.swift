@@ -42,7 +42,7 @@ struct ContentView: View {
             } label: {
                 Spacer()
                 VStack(spacing: 0) {
-                    Image("RecordMain").renderingMode(.template).frame(width: 36, height: 36)
+                    Image(selection == 0 ? "RecordMain_2" : "RecordMain_1").frame(width: 36, height: 36)
                     Text("记录").font(.system(size: 10))
                 }.foregroundColor(selection == 0 ? Color.blue96 : Color.grey70)
                 Spacer()
@@ -52,7 +52,7 @@ struct ContentView: View {
             } label: {
                 Spacer()
                 VStack(spacing: 0) {
-                    Image("CommunityMain").renderingMode(.template).frame(width: 36, height: 36)
+                    Image(selection == 1 ? "CommunityMain_2" : "CommunityMain_1").renderingMode(.template).frame(width: 36, height: 36)
                     Text("社区").font(.system(size: 10))
                 }.foregroundColor(selection == 1 ? Color.blue96 : Color.grey70)
                 Spacer()
@@ -62,19 +62,9 @@ struct ContentView: View {
             } label: {
                 Spacer()
                 VStack(spacing: 0) {
-                    Image("MsgMain").renderingMode(.template).frame(width: 36, height: 36)
-                    Text("消息").font(.system(size: 10))
-                }.foregroundColor(selection == 2 ? Color.blue96 : Color.grey70)
-                Spacer()
-            }
-            Button {
-                selection = 3
-            } label: {
-                Spacer()
-                VStack(spacing: 0) {
-                    Image("PersonalMain").renderingMode(.template).frame(width: 36, height: 36)
+                    Image(selection == 2 ? "PersonalMain_2" : "PersonalMain_1").renderingMode(.template).frame(width: 36, height: 36)
                     Text("个人").font(.system(size: 10))
-                }.foregroundColor(selection == 3 ? Color.blue96 : Color.grey70)
+                }.foregroundColor(selection == 2 ? Color.blue96 : Color.grey70)
                 Spacer()
             }
         }.padding(.bottom, 30)

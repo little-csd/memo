@@ -36,10 +36,10 @@ struct RecordView: View {
     
     @ViewBuilder
     func labelItemBuilder(txt: String) -> some View {
-        Text("#\(txt)")
-            .font(.system(size: 15, weight: .bold, design: .default))
+        Text(txt == "所有标签" ? txt : "#\(txt)")
+            .font(.system(size: 15, weight: selectedLabel == txt ? .bold : .regular, design: .default))
             .foregroundColor(selectedLabel == txt ? .white : .grey58).fixedSize()
-            .padding(.init(top: 4, leading: 12, bottom: 4, trailing: 12))
+            .padding(.init(top: 7.5, leading: 12, bottom: 7.5, trailing: 12))
             .background(selectedLabel == txt ? Color.blue96 : Color.grey97)
             .cornerRadius(CORNER_RADIUS)
             .onTapGesture {

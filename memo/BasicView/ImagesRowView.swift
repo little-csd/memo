@@ -12,7 +12,7 @@ struct ImagesRowView: View {
     @Binding var currentImageIDs: [String]
     
     var body: some View {
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 18) {
                 ForEach(0..<currentImageIDs.count, id: \.self) { idx in
                     ZStack(alignment: .topTrailing) {
@@ -25,7 +25,7 @@ struct ImagesRowView: View {
                         }
                     }
                 }
-            }.padding(.edge(leading: 24, bottom: 18, trailing: 24))
-        }
+            }
+        }.padding(.edge(leading: 24, bottom: 18, trailing: 24))
     }
 }

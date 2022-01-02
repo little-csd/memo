@@ -20,6 +20,7 @@ struct ImageWithPreview: View {
                 Image(uiImage: image!)
                     .centerCropped()
                     .frame(width: IMAGE_SIZE, height: IMAGE_SIZE)
+                    .cornerRadius(CORNER_RADIUS_SS)
                     .fullScreenCover(isPresented: $isClicked) {
                     } content: {
                         ZStack {

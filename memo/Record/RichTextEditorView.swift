@@ -34,7 +34,7 @@ struct RichTextEditorView: View {
                                 tagViewModel: tagViewModel)
                     .ignoresSafeArea(edges: .top)
             } else {
-                VStack {
+                VStack(spacing: 0) {
                     Color.grey92.frame(width: 36, height: 6)
                         .cornerRadius(CORNER_RADIUS)
                         .padding(.edge(top: 8, bottom: 12))
@@ -51,7 +51,7 @@ struct RichTextEditorView: View {
                                 Text("记录你的想法...").font(.system(size: 16)).foregroundColor(.grey70)
                             }
                         }
-                    }.padding(.edge(leading: 24, bottom: 24, trailing: 24))
+                    }.padding(.edge(leading: 24, bottom: 36, trailing: 24))
                     if (currentImageIDs.count > 0) {
                         ImagesRowView(currentImageIDs: $currentImageIDs)
                     }
@@ -68,6 +68,16 @@ struct RichTextEditorView: View {
                         } label: {
                             Image("EditorBold").renderingMode(.template).foregroundColor(richTextViewCoord.isBold ? .blue96 : .grey58)
                         }
+                        Button {
+                            UINotificationFeedbackGenerator().notificationOccurred(.error)
+                        } label: {
+                            Image("EditorTodo").renderingMode(.template).foregroundColor(.grey58)
+                        }
+                        Button {
+                            UINotificationFeedbackGenerator().notificationOccurred(.error)
+                        } label: {
+                            Image("EditorScan").renderingMode(.template).foregroundColor(.grey58)
+                        }
                         Spacer()
                         Button {
                             if (richTextViewCoord.isTextEmpty) {
@@ -77,10 +87,13 @@ struct RichTextEditorView: View {
                             memoViewModel.newMemo(content: richTextViewCoord.data, labels: currentLabels, attachments: currentImageIDs, referer: memoReferer)
                             showKeyboard = false
                         } label: {
-                            Text("保存").font(.system(size: 14)).foregroundColor(Color.white)
-                                .padding(.edge(top: 5, leading: 14, bottom: 5, trailing: 14))
+                            Text("保存")
+                                .font(.system(size: 14, weight: .bold, design: .default))
+                                .foregroundColor(Color.white)
+                                .frame(height: 28)
+                                .padding(.horizontal, 12)
                                 .background(Color.blue96)
-                                .cornerRadius(CORNER_RADIUS_S)
+                                .cornerRadius(CORNER_RADIUS)
                         }
                     }
                     .padding(.edge(top: 8, leading: 24, bottom: 8, trailing: 24))

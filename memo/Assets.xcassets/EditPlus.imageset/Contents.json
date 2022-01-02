@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "EditorTodo.png",
+      "filename" : "EditPlus.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "EditorTodo@2x.png",
+      "filename" : "EditPlus@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "EditorTodo@3x.png",
+      "filename" : "EditPlus@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

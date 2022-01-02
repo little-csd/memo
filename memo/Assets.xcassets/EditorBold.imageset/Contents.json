@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "editor_bold.png",
+      "filename" : "EditorBold.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "editor_bold@2x.png",
+      "filename" : "EditorBold@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "editor_bold@3x.png",
+      "filename" : "EditorBold@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

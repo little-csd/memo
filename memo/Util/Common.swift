@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+let CORNER_RADIUS_SS = CGFloat(2.0)
 let CORNER_RADIUS_S = CGFloat(4.0)
 let CORNER_RADIUS = CGFloat(8.0)
 let BLUR_RADIUS = CGFloat(5.0)

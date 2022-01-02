@@ -30,15 +30,10 @@ struct LabelCreateView: View {
                         .frame(height: 20)
                         .foregroundColor(.black01)
                         .padding(.edge(top: 8, leading: 12, bottom: 8))
-                    if (limitedTextViewCoord.text.count <= 10) {
-                        Text("\(limitedTextViewCoord.text.count)/10")
-                            .font(.system(size: 15))
-                            .foregroundColor(.grey80)
-                            .padding(.all, 8)
-                    }
-                    if (limitedTextViewCoord.text.count > 10) {
-                        Image(systemName: "multiply.circle").foregroundColor(.red).padding(.trailing, 8)
-                    }
+                    Text("\(limitedTextViewCoord.text.count)/10")
+                        .font(.system(size: 15))
+                        .foregroundColor(limitedTextViewCoord.text.count <= 10 ? .grey80 : .red02)
+                        .padding(.all, 8)
                 }.background(Color.grey97)
                     .cornerRadius(CORNER_RADIUS)
                     .padding(.edge(leading: 9, bottom: 18, trailing: 9))
