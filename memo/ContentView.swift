@@ -89,15 +89,6 @@ struct ContentView: View {
                 case 2:
                     ZStack {
                         Color.grey97
-                        Text("消息(暂未开放)").onTapGesture {
-                            for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
-                                print("\(key) = \(value) \n")
-                            }
-                        }
-                    }
-                case 3:
-                    ZStack {
-                        Color.grey97
                         Text("个人(暂未开放)，点击可删除所有记录").onTapGesture {
                             memoViewModel.clear()
                             tagViewModel.clear()

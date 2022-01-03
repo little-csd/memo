@@ -17,6 +17,31 @@ struct LabelCreateView: View {
     @ObservedObject var limitedTextViewCoord: LimitedTextViewCoord
     @ObservedObject var tagViewModel: TagViewModel
     
+    private func onComplete() {
+        if (limitedTextViewCoord.text.count > 10) {
+            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        } else {
+            let tag = limitedTextViewCoord.text
+            // 标签使用了不允许的名字或者新建了空的标签，给出警告
+            if (tag == "全部标签" || tag == "未分类" || (tag.isEmpty && selectedLabel.isEmpty) || currentLabels.contains(tag)) {
+                UINotificationFeedbackGenerator().notificationOccurred(.warning)
+                return
+            }
+            withAnimation {
+                if (!selectedLabel.isEmpty) {
+                    currentLabels.removeAll { $0 == selectedLabel }
+                }
+                if (!tag.isEmpty) {
+                    tagViewModel.newTag(tag: tag)
+                    currentLabels.append(tag)
+                }
+                showKeyboard = false
+                limitedTextViewCoord.text = ""
+                selectedLabel = ""
+            }
+        }
+    }
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             Color.black.opacity(0.1)
@@ -51,30 +76,7 @@ struct LabelCreateView: View {
                         Spacer()
                     }
                     Color.grey80.frame(width: 0.5)
-                    Button {
-                        if (limitedTextViewCoord.text.count > 10) {
-                            UINotificationFeedbackGenerator().notificationOccurred(.warning)
-                        } else {
-                            let tag = limitedTextViewCoord.text
-                            // 标签使用了不允许的名字或者新建了空的标签，给出警告
-                            if (tag == "全部标签" || tag == "未分类" || (tag.isEmpty && selectedLabel.isEmpty) || currentLabels.contains(tag)) {
-                                UINotificationFeedbackGenerator().notificationOccurred(.warning)
-                                return
-                            }
-                            withAnimation {
-                                if (!selectedLabel.isEmpty) {
-                                    currentLabels.removeAll { $0 == selectedLabel }
-                                }
-                                if (!tag.isEmpty) {
-                                    tagViewModel.newTag(tag: tag)
-                                    currentLabels.append(tag)
-                                }
-                                showKeyboard = false
-                                limitedTextViewCoord.text = ""
-                                selectedLabel = ""
-                            }
-                        }
-                    } label: {
+                    Button(action: onComplete) {
                         Spacer()
                         Text("完成")
                             .font(.system(size: 16, weight: .bold))
@@ -111,6 +113,10 @@ struct LabelCreateView: View {
                     }
                 }
             }
+        }.onAppear {
+            limitedTextViewCoord.onComplete = onComplete
+        }.onDisappear {
+            limitedTextViewCoord.onComplete = nil
         }
     }
 }

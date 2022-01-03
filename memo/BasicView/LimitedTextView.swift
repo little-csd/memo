@@ -36,6 +36,7 @@ struct LimitedTextView: UIViewRepresentable {
         view.textColor = Color.black01.toUIColor()
         view.delegate = context.coordinator
         view.text = context.coordinator.text
+        view.returnKeyType = .done
         
         let label = context.coordinator.hint
         label.sizeToFit()
@@ -73,6 +74,7 @@ class LimitedTextViewCoord: NSObject, UITextViewDelegate, ObservableObject {
         }
     }
     let hint = createHint("输入名称")
+    var onComplete: (() -> Void)? = nil
     
     func textViewDidChange(_ textView: UITextView) {
         text = textView.text
@@ -80,5 +82,16 @@ class LimitedTextViewCoord: NSObject, UITextViewDelegate, ObservableObject {
         if (text.isEmpty) {
             textView.addSubview(hint)
         }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            onComplete?();
+            return false;
+        }
+        if text.contains("\n") {
+            return false;
+        }
+        return true;
     }
 }

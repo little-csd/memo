@@ -113,6 +113,7 @@ class RichTextViewCoordinator: NSObject, UITextViewDelegate, ObservableObject {
                 textView.attributedText = s
                 textView.selectedRange = NSRange.init(location: range.location + range.length, length: 0)
             }
+            data = textView.attributedText
         }
     }
     
