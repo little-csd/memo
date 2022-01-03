@@ -195,5 +195,21 @@ struct MemoDetailView: View {
             }.ignoresSafeArea()
         }
         .navigationBarTitleView(Text(""), displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+            leading: Button(action: {
+                chain.memos[memoIndex].content = richTextViewCoord.data
+                chain.memos[memoIndex].attachments = currentImageIDs
+                chain.tags = currentLabels
+                memoViewModel.saveChain(chain: chain)
+                presentation.wrappedValue.dismiss()
+            }, label: {
+                Image("MemoDetailBack")
+            }),
+            trailing: Button(action: {
+                UINotificationFeedbackGenerator().notificationOccurred(.error)
+            }, label: {
+                Image("MemoDetailMore")
+            }))
     }
 }
